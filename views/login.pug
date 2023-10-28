@@ -1,0 +1,17 @@
+html
+    head
+        title Iniciar Sesión
+        link(rel="stylesheet" href="/static/css/login.css")
+    body
+        form(action="/login", method="post", class="login-form")
+            h1 Iniciar Sesión
+            .form-group
+                label(for="email") Correo Electrónico:
+                input(type="email", id="email", name="email", required)
+            .form-group
+                label(for="password") Contraseña:
+                input(type="password", id="password", name="password", required)
+            .form-group
+                button(type="button", onclick='login()') Iniciar Sesión
+            p(id="msg-error", class="msg-error")
+    script(src="/static/js/login.js") 
